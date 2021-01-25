@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 
 const App = () => {
   return (
-    <div className="min-h-screen antialiased bg-gray-100">
+    <div className="antialiased bg-gray-200 min-h-screen">
       <Header />
     </div>
   );
