@@ -3,14 +3,14 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="h-36 w-screen md:h-44 md:rounded-bl-full bg-blue-600 text-white">
-      <div className="flex items-center justify-between md:items-start md:pt-8 md:px-8 h-full px-4 pb-8">
+      <div className="flex items-center justify-between md:items-start md:pt-8 md:px-8 lg:px-36 h-full px-4 pb-8">
         <h1 className="text-4xl md:text-3xl font-semibold">devJobs</h1>
         <div className="flex items-center justify-between space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="h-6 w-6"
+            className="h-4 w-4 md:h-6 md:w-6"
           >
             <path
               fillRule="evenodd"
@@ -18,14 +18,14 @@ const Header = () => {
               clipRule="evenodd"
             />
           </svg>
-          <div className="flex flex-col justify-center p-1 h-6 w-14 rounded-2xl bg-white">
-            <span className="block bg-blue-600 rounded-full h-4 w-4 "></span>
+          <div className="flex flex-col justify-center p-1 h-5 w-12 md:h-6 md:w-14 rounded-2xl bg-white">
+            <span className="block bg-blue-600 rounded-full h-3 w-3 md:h-4 md:w-4 "></span>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="h-6 w-6"
+            className="h-4 w-4 md:h-6 md:w-6"
           >
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
           </svg>
@@ -71,8 +71,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="hidden divide-x-2 md:flex text-gray-700 bg-white rounded-xl absolute h-20 -mt-2 md:mt-5 top-28 left-2 md:left-6 right-2 md:right-6">
-        <div className="flex items-center p-2 text-blue-600">
+      <div className="hidden divide-x-2 md:flex lg:justify-between text-gray-700 bg-white rounded-xl absolute h-20 -mt-2 md:mt-5 top-28 left-2 md:left-8 right-2 md:right-8 lg:left-44 lg:right-44">
+        <div className="flex items-center p-2 text-blue-600 lg:w-1/3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -91,7 +91,7 @@ const Header = () => {
             className="text-gray-700 bg-transparent text-sm font-normal placeholder-gray-500 border-none focus:ring-0"
           />
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex items-center p-2 lg:w-1/3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -111,16 +111,21 @@ const Header = () => {
             className="text-gray-700 bg-transparent text-sm font-normal placeholder-gray-500 border-none focus:ring-0"
           />
         </div>
-        <div className="flex items-center space-x-4 p-2">
-          <div className="flex items-center space-x-1">
+        <div className="flex items-center lg:justify-between space-x-4 md:space-x-6 lg:space-x-5 p-2 lg:w-1/3">
+          <div className="flex items-center  space-x-1 lg:space-x-4">
             <input
               type="checkbox"
               placeholder="Filter by Location..."
               className="w-7 h-7 rounded-md focus:outline-none focus:ring-offset-0 focus:ring-0 bg-gray-300 border-0"
             />
-            <h1 className="text-gray-800 font-bold text-base">Full Time</h1>
+            <h1 className="text-gray-800 font-bold text-sm lg:text-base lg:hidden">
+              Full Time
+            </h1>
+            <h1 className="text-gray-800 font-bold text-sm lg:text-base hidden lg:block">
+              Full Time Only
+            </h1>
           </div>
-          <button className="p-2 w-24 h-10 rounded-lg bg-blue-500 text-white font-semibold text-sm tracking-wider">
+          <button className="p-2 lg:text-base w-24 h-10  rounded-lg bg-blue-500 text-white font-semibold text-sm tracking-wider">
             Search
           </button>
         </div>
